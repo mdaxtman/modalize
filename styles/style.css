@@ -1,0 +1,12 @@
+body{
+  background: gray;
+}
+
+.target, .has-attr{
+  background: green;
+  width: 33%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  height: 200px;
+}
