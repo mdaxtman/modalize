@@ -64,15 +64,15 @@ var modalize = (function(){
     var i = target.length;
     var arr = [];
     while(i--){
-      var attr = target[i].getAttribute('modalize-attr');
+      var attr = target[i].getAttribute('data-modalize-attr');
       if(attr){
         var attrObject = {};
         attr.split(';').forEach(function(prop){
           prop = prop.split(':');
-          if(prop[0][0] === ' '){
+          while(prop[0][0] === ' '){
             prop[0] = prop[0].slice(1);
           }
-          if(prop[1] && prop[1][0] === ' '){
+          while(prop[1] && prop[1][0] === ' '){
             prop[1] = prop[1].slice(1);
           }
           if(prop[0] && prop[1]){
